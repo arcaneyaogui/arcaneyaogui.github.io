@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="/HEXO+GITHUB/搭建博客"><meta name="keywords" content="hexo"><meta name="author" content="YaoGui"><meta name="copyright" content="YaoGui"><title>/HEXO+GITHUB/搭建博客 | YaoGui's blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.4.0'
+} </script><meta name="generator" content="Hexo 5.4.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#github-hexo"><span class="toc-number">1.</span> <span class="toc-text">github + hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E9%83%A8%E7%BD%B2"><span class="toc-number">1.1.</span> <span class="toc-text">前期部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-node-js"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.安装 node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85Git"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85hexo"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.安装hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.2.</span> <span class="toc-text">如何写博客?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%A0%87%E9%A2%98-%E5%86%99%E4%B8%8B%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.1.</span> <span class="toc-text">创建标题,写下内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%86%99%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">怎么写文章内容?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8D%89%E7%A8%BF-%E5%92%8C-%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.2.2.</span> <span class="toc-text">草稿 和 页面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8D%89%E7%A8%BF"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">草稿</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%AF%E7%B2%B9%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">纯粹页面</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAGitHub%E4%BB%93%E5%BA%93"><span class="toc-number">1.3.</span> <span class="toc-text">创建GitHub仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-%E7%BB%91%E5%AE%9A-GitHub"><span class="toc-number">1.3.1.</span> <span class="toc-text">git 绑定 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E7%BD%91%E7%AB%99"><span class="toc-number">1.3.2.</span> <span class="toc-text">推送网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BE%E5%A3%B0"><span class="toc-number">1.3.3.</span> <span class="toc-text">尾声</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://cdn.jsdelivr.net/gh/arcaneyaogui/photosBed@master/20210618/touxiang.38cvdo15qh40.jpg"></div><div class="author-info__name text-center">YaoGui</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">3</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/arcaneyaogui/photosBed@master/20210618/wallhaven-0w6j7q.67qv3jyz5zs0.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">YaoGui's blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">个人主页</a><a class="site-page" href="/archives">时间轴</a><a class="site-page" href="/tags">标签页</a><a class="site-page" href="/categories">文章类别</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">/HEXO+GITHUB/搭建博客</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-06-20</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="github-hexo"><a href="#github-hexo" class="headerlink" title="github + hexo"></a>github + hexo</h1><p>本人对于这方面基本都是零基础,但是我就是想试一试,一个零基础得,毫无计算机相关经验得人,能否成功用github+hexo搭建成一个自己得博客.</p>
+<p>由于笔者之前就有过类似得想法,并且尝试过,但止步于安装完node+git+hexo,往后面得步骤总是莫名奇妙的错,让我放弃,时隔一年,突然记起来电脑还因为当年得这件事情,下载好了node.js hexo等等一系列渣七乱八得东西,决定重新试一试,看看能不能搭建成功.</p>
+<p><strong>声明:本文一切全是来源于网络,自己只是把自己得按照网络上的步骤一步步详细记录下来.</strong></p>
+<p>本次教程参考来源:</p>
+<p>知乎   @吴润<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">https://zhuanlan.zhihu.com/p/26625249</a></p>
+<p>哔哩哔哩  @AI悦创<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kh411Q7ei?p=7">https://www.bilibili.com/video/BV1Kh411Q7ei?p=7</a></p>
+<h2 id="前期部署"><a href="#前期部署" class="headerlink" title="前期部署"></a>前期部署</h2><p>[toc]</p>
+<h3 id="1-安装-node-js"><a href="#1-安装-node-js" class="headerlink" title="1.安装 node.js"></a>1.安装 node.js</h3><p>因为我安装过,但是写教程,我先说说怎么卸载.</p>
+<p>C:\Users\admin\AppData\Roaming下手动删除npm和npm-cache文件夹(要以管理员身份删除)</p>
+<p><img src="https://i.loli.net/2021/06/20/MoL2CXHbk8idheu.png" alt="image-20210611232857502"></p>
+<p>我先是将这两个文件删除,并没有那种弹出让我授权管理员,应该不是管理员删除文件,就是正常的删除文件,不知道行不行,先试试.</p>
+<p>接下来我卸载了node.js , 现在我们看看是不是卸载了.</p>
+<p><img src="https://i.loli.net/2021/06/20/6xqIGcQBESYs2j3.png" alt="image-20210611234152430"></p>
+<p>反正再查版本是报错蛮,这样就是删除了.</p>
+<p><strong>接下来我们来安装node.js</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 献上node.js官方文档</span><br><span class="line">http://nodejs.cn/learn/how-to-install-nodejs</span><br></pre></td></tr></table></figure>
+
+
+
+<p>点击下面网址,下载你对应的版本.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://nodejs.cn/download/ </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>安装步骤如下:</p>
+<p><img src="https://i.loli.net/2021/06/20/6OjcASyB9bohwfC.png" alt="image-20210611234840004"></p>
+<p><img src="https://i.loli.net/2021/06/20/rm4ozfvkuqKLdlZ.png" alt="image-20210611234903716"></p>
+<p><img src="https://i.loli.net/2021/06/20/BYapSTRqXeI5oV4.png" alt="image-20210611234959454"></p>
+<p>用我蹩脚的英语水平,只能马虎翻译翻译下面是个东西是啥.</p>
+<ul>
+<li>Node.js 的运行.</li>
+<li>npm 包的信息</li>
+<li>在线文档的快捷键</li>
+<li>添加到环境变量.</li>
+</ul>
+<p>反正点击next 就对了</p>
+<p><img src="https://i.loli.net/2021/06/20/zL8EfdWMvol3Dex.png" alt="image-20210611235204027"></p>
+<p>翻译: </p>
+<p><em>自动安装需要的工具,注意,这个也将下载巧克力?(巧克力什么鬼),这个脚本将在完全更新完后弹出一个新窗口.</em></p>
+<p>总结:反正就是不用勾选….直接next</p>
+<p><img src="https://i.loli.net/2021/06/20/8rXUTDWC2ePgwHi.png" alt="image-20210611235800555"></p>
+<p>next 后直接 就finish 安装完成了.我们再看看是否安装完成</p>
+<p>莫名奇妙说更新npm,反正没出错,我就更新了一下npm.</p>
+<p><img src="https://i.loli.net/2021/06/20/DRWlfsJEIeLdGbQ.png" alt="image-20210612000410866"></p>
+<p>能查出这两个的版本号,就是安装好了.</p>
+<h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h3><p><strong>请自行谷歌或者自行参考相关文档.</strong></p>
+<p>这个太简单,百度一下,安装就好,相当于就是个软件,教程很多.</p>
+<h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h3><p>创建一个路径中不包含中文空格得文件,就起名叫MyBlog把.</p>
+<p>用git bash here , 在此文件中安装hexo</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  <span class="comment">&lt;!-- 安装hexo --&gt;</span></span><br><span class="line"></span><br><span class="line">hexo -v  <span class="comment">&lt;!-- 查看hexo版本 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>下方为使用git 和 powershell 分别检测安装好node+git+hexo</strong></p>
+<p>网上是说,使用powershell 和 git 都可以进行命令操作,我先选择git进行操作试试.</p>
+<p>首先建好一个文件夹,这个文件夹用来放hexo相关东西,这个文件夹路径不要有中文和空格.</p>
+<p><img src="https://i.loli.net/2021/06/20/1LXRGCeiwlcHoKz.png" alt="image-20210611231014810"></p>
+<p><img src="https://i.loli.net/2021/06/20/Msxj7JCoupl4tik.png" alt="image-20210611225702022"></p>
+<p><img src="https://i.loli.net/2021/06/20/FydUrshC8N7Ii3Y.png" alt="image-20210611225938024"></p>
+<p>由于我安装过hexo了,再在另外一个文件夹输入安装命令会如下图.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\SoftWare\NodeFiles\node_global\hexo -&gt; D:\SoftWare\NodeFiles\node_global\node_modules\hexo-cli\bin\hexo</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules\hexo-cli\node_modules\chokidar\node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br><span class="line"></span><br><span class="line">+ hexo-cli@4.2.0</span><br><span class="line">removed 1 package and updated 26 packages in 31.671s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>我觉得去年安装的hexo版本低了,这里先来卸载一遍.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-cli -g   			<span class="comment">// hexo卸载命令.</span></span><br></pre></td></tr></table></figure>
+
+<p>卸载后 , 再按照上面安装如下:</p>
+<p><img src="https://i.loli.net/2021/06/20/Vzb1cTRBKgdjhwG.png" alt="image-20210612001923159"></p>
+<p>但是我有点离谱,和别人教程出来的结果不对,不管是我这git最后出来的结果,还是对比GitHub上的hexo仓库,我都觉得不对劲,但是我又是零基础,没爆那种红,那种错误,我都不知道到底是错了还是没错.</p>
+<p><img src="https://i.loli.net/2021/06/20/FEZkdSQbHcL97VP.png" alt="image-20210612001902468"></p>
+<p><img src="https://i.loli.net/2021/06/20/8HTItpB9QDiArSJ.png" alt="image-20210612002001746"></p>
+<p>为啥我文件会和被人创库里面的文件不一样呢……</p>
+<p>先不管,先看看  hexo g  和  hexo s 能不能生成出来博客.</p>
+<p>先来试试  hexo g</p>
+<p><img src="https://i.loli.net/2021/06/20/uLVjhZX4mvMRqtc.png" alt="image-20210612002426276"></p>
+<p>有没有发现运行hexo之后,多出来了一个文件是public , 这个里面就是我们博客页面生成的文件.</p>
+<p><img src="https://i.loli.net/2021/06/20/Ou5iK8fTU9Bzdly.png" alt="image-20210612002540809"></p>
+<p>接下来看hexo s </p>
+<p><img src="https://i.loli.net/2021/06/20/jOMcqWpULbv13sz.png" alt="image-20210612002806436"></p>
+<p>我们用浏览器,输入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 看看能不能访问.</p>
+<p><img src="https://i.loli.net/2021/06/20/hgHoiK6OmBRD9Pb.png" alt="image-20210612002922144"></p>
+<p>OK,这样你就看到了我们的这个hexo页面是确实能够被推出来的.</p>
+<h2 id="如何写博客"><a href="#如何写博客" class="headerlink" title="如何写博客?"></a>如何写博客?</h2><h3 id="创建标题-写下内容"><a href="#创建标题-写下内容" class="headerlink" title="创建标题,写下内容"></a>创建标题,写下内容</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 命令如下,就可以生成一篇文章</span><br><span class="line">hexo new &quot;标题名称&quot;</span><br><span class="line"></span><br><span class="line">hexo g 生成</span><br><span class="line">hexok s 推送</span><br></pre></td></tr></table></figure>
+
+<h4 id="怎么写文章内容"><a href="#怎么写文章内容" class="headerlink" title="怎么写文章内容?"></a>怎么写文章内容?</h4><p>我们用vscode打开这个文件夹区域</p>
+<p><img src="https://i.loli.net/2021/06/20/FQY5t1Pgs7VSi9x.png" alt="image-20210612005423773"></p>
+<p>编辑完内容后,保存文件,然后 hexo g  &gt;&gt; hexo s 推送出去就可以看见了.</p>
+<p><img src="https://i.loli.net/2021/06/20/ghP7OjvFf2zA8rR.png" alt="image-20210612005521683"></p>
+<h3 id="草稿-和-页面"><a href="#草稿-和-页面" class="headerlink" title="草稿 和 页面"></a>草稿 和 页面</h3><h4 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new draft  &quot; 草稿名称&quot;</span><br></pre></td></tr></table></figure>
+
+<p>注意,创建草稿页面,使用hexo g 的时候是不会被生成的.</p>
+<h4 id="纯粹页面"><a href="#纯粹页面" class="headerlink" title="纯粹页面"></a>纯粹页面</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page  &quot;页面名称&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后页面管理的文件夹是 scaffolds </p>
+<img src="https://i.loli.net/2021/06/20/6Z7DgvfsXzlAujk.png" alt="image-20210612005951155"  />
+
+
+
+<p>我们也可以自己创建页面等等,但是由于笔者也是水平有限,只能教基础.<br>搭建零基础根本不是问题,学就完了,如果你爱折腾,可以不厌其烦的百度,谷歌搜索不同答案,不断验证,错几遍也就会了.</p>
+<h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><p>创建一个GitHub仓库,仓库名字需要和自己名字一样 , 后面 +  .github.io</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">举个例子</span><br><span class="line">比如你的github用户名叫 zhagnsan</span><br><span class="line">那么你的那个仓库名字就是 zhangsan.github.io</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="git-绑定-GitHub"><a href="#git-绑定-GitHub" class="headerlink" title="git 绑定 GitHub"></a>git 绑定 GitHub</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br><span class="line"></span><br><span class="line">分别输入完上面三个代命令后,直接三个回车就行.</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后我们看这个新生成了这个文件,右键记事本打开,复制里面内容.</p>
+<p><img src="https://i.loli.net/2021/06/20/WLxeUHqkPoayl3S.png" alt="image-20210612014213956"></p>
+<p>然后我们再GitHub上面新建 SSH Keys</p>
+<p><img src="https://i.loli.net/2021/06/20/JW7u2xsbSQoviRl.png" alt="image-20210612014227734"></p>
+<p>然后把那一堆东西复制到这个key下面.标题是按照你喜好自己取名.点击add ssh key.</p>
+<p><img src="https://i.loli.net/2021/06/20/x96JvAQFpotbBLu.png" alt="image-20210612014444443"></p>
+<p>然后你就可以看见这个样子的了.</p>
+<p><img src="https://i.loli.net/2021/06/20/VsvCSAqPJjmKQI9.png" alt="image-20210612014624938"></p>
+<p><strong>注意,如果你也是跟我一样之前弄过但是失败了,并且现在还换了一个GitHub账号,那么你需要把 .ssh文件夹中的文件删除干净,然后再按照上面的步骤来一遍,就可以了.</strong></p>
+<h3 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h3><p>这个是我们的<strong>站点配置文件</strong></p>
+<p>主题中有个名字和这个一样的文件,称为<strong>主题配置文件</strong></p>
+<p><img src="https://i.loli.net/2021/06/20/SaDuK4nkNflJbH9.png" alt="image-20210612015530692"></p>
+<p>我们用vscode打开这个文件,直接到最下面去.</p>
+<p><img src="https://i.loli.net/2021/06/20/e1Rhwdqa73Tl52E.png" alt="image-20210612021149115"></p>
+<p>修改成我这个样子的,然后<strong>保存.</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/你自己GitHub名称/你自己GitHub名称.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+
+
+<p>接下来我们写几条命令,把它推送到GitHub的创库的上面去.</p>
+<p>告知的你hexo你要把博客部署到那个地方.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>每次更新推文时都得写这个东西.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean     // 用来清除缓存文件,和以生成的静态文件.</span><br><span class="line"></span><br><span class="line">hexo g 		 // 生成博客的指令</span><br><span class="line"></span><br><span class="line">hexo d 		 // d 表示 depoly[配置,部署的意思]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后接下来你可以访问你GitHub的网址进行访问你的博客了.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">你自己GitHub名称.github.io    //直接就可以访问</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://i.loli.net/2021/06/20/SeWdugOBwArRbiT.png" alt="image-20210612022700492"></p>
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><ul>
+<li>基本的框架就这样搭起来了<ul>
+<li>你可以换自己喜欢的主题.</li>
+<li>你甚至可以自己写页面部署上去.</li>
+<li>你可以买自己域名绑定.</li>
+<li>当然也可以搭建再自己买的服务器上.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://hexo.io/zh-cn/docs/        // hexo文档.</span><br></pre></td></tr></table></figure>
+
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YaoGui</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/06/20/hexo+github/">http://example.com/2021/06/20/hexo+github/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com">YaoGui's blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2021/06/12/essay-little-name/"><span>essay little name</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/arcaneyaogui/photosBed@master/20210618/wallhaven-0w6j7q.67qv3jyz5zs0.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2021 By YaoGui</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
